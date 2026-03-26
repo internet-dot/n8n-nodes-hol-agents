@@ -1,0 +1,1 @@
+{"version":3,"file":"HolAgents.node.d.ts","sourceRoot":"","sources":["../../../nodes/HolAgents/HolAgents.node.ts"],"names":[],"mappings":"AAAA,OAAO,EACN,iBAAiB,EACjB,kBAAkB,EAClB,SAAS,EACT,oBAAoB,EAEpB,MAAM,cAAc,CAAC;AAEtB,qBAAa,SAAU,YAAW,SAAS;IAC1C,WAAW,EAAE,oBAAoB,CAyF/B;IAEI,OAAO,CAAC,IAAI,EAAE,iBAAiB,GAAG,OAAO,CAAC,kBAAkB,EAAE,EAAE,CAAC;CAqEvE"}

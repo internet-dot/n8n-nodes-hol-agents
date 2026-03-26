@@ -1,0 +1,7 @@
+{
+  "name": "HOL Agents",
+  "description": "Discover and interact with AI agents on the Hashgraph Online registry",
+  "version": 1,
+  "icon": "file:hol-agents.svg",
+  "displayName": "HOL Agents"
+}

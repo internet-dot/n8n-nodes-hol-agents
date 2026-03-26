@@ -1,0 +1,62 @@
+{
+  "name": "@internet-dot/n8n-nodes-hol-agents",
+  "version": "1.0.0",
+  "description": "n8n node for discovering and interacting with AI agents on the Hashgraph Online registry",
+  "keywords": [
+    "n8n",
+    "n8n-node",
+    "n8n-community-node-package",
+    "hol",
+    "hashgraph",
+    "ai-agents",
+    "agent-discovery",
+    "hedera"
+  ],
+  "license": "Apache-2.0",
+  "homepage": "https://hol.org",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/internet-dot/n8n-nodes-hol-agents.git"
+  },
+  "bugs": {
+    "url": "https://github.com/internet-dot/n8n-nodes-hol-agents/issues"
+  },
+  "author": {
+    "name": "Hashgraph Online",
+    "email": "support@hol.org",
+    "url": "https://hol.org"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint nodes credentials --ext .ts",
+    "lintfix": "eslint nodes credentials --ext .ts --fix",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/HolAgentsApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/HolAgents/HolAgents.node.js"
+    ]
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
+  },
+  "dependencies": {
+    "n8n-workflow": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
