@@ -1,88 +1,66 @@
-# n8n HOL Agents Node
+# n8n-nodes-hol-agents
 
-n8n community node for discovering and interacting with AI agents on the Hashgraph Online registry.
+[![npm version](https://badge.fury.io/js/n8n-nodes-hol-agents.svg)](https://badge.fury.io/js/n8n-nodes-hol-agents)
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+n8n community node for discovering and interacting with AI agents on the [Hashgraph Online](https://hol.org) registry.
+
+## Features
+
+- **Search Agents**: Find AI agents by capability, skill, or description
+- **Get Agent Details**: Retrieve detailed information about a specific agent
+- **Find Similar Agents**: Discover agents with similar capabilities
 
 ## Installation
 
-### Community Nodes (Recommended)
-1. Go to **Settings** > **Community Nodes**
-2. Select **Install**
-3. Enter `n8n-nodes-hol-agents`
+### In n8n Desktop
+1. Go to **Settings** → **Community Nodes**
+2. Search for `n8n-nodes-hol-agents`
+3. Click **Install**
+
+### In n8n Cloud/Self-hosted
+1. Go to **Settings** → **Community Nodes**
+2. Select **Install from npm**
+3. Enter: `n8n-nodes-hol-agents`
 4. Click **Install**
 
 ### Manual Installation
 ```bash
+cd /path/to/n8n
 npm install n8n-nodes-hol-agents
+n8n restart
 ```
 
-Restart n8n after installation.
+## Usage
 
-## Credentials
-
-The node works without credentials for public access. For higher rate limits:
-1. Get an API key from https://hol.org/registry
-2. In n8n, go to **Credentials** > **Add Credential**
-3. Select **HOL Agents API**
-4. Enter your API key
-
-## Operations
+After installation, you'll find the **HOL Agents** node in your node palette under the "Transform" category.
 
 ### Search Agents
-Find AI agents by capability, skill, or description.
-
-**Parameters:**
-- **Query**: Search string (e.g., "trading", "image generation")
-- **Limit**: Maximum results (default 10)
-
-**Output:**
-```json
-{
-  "total": 6177,
-  "hits": [
-    {
-      "uaid": "uaid:aid:xxx",
-      "name": "Agent Name",
-      "description": "...",
-      "trustScore": 45.5,
-      "capabilities": ["skill1", "skill2"],
-      "protocols": ["A2A", "MCP"]
-    }
-  ]
-}
-```
+Search for AI agents by keyword:
+- **Query**: Search terms (e.g., "trading", "image generation")
+- **Limit**: Maximum number of results (default: 10)
 
 ### Get Agent
-Retrieve detailed information about a specific agent.
-
-**Parameters:**
-- **UAID**: Universal Agent ID (with or without `uaid:` prefix)
+Retrieve details for a specific agent:
+- **UAID**: Universal Agent ID (e.g., `uaid:aid:xxx`)
 
 ### Find Similar Agents
-Find agents with similar capabilities.
-
-**Parameters:**
-- **UAID**: Agent to find similar agents for
-
-## Use Cases
-
-- **Agent Orchestration**: Find and connect to specialized agents in workflows
-- **Task Routing**: Dynamically discover agents based on task requirements
-- **Capability Discovery**: Understand what agents can do
+Discover agents with similar capabilities:
+- **UAID**: Universal Agent ID to find similar agents for
 
 ## About HOL
 
 Hashgraph Online is the "Trust Engine for the Agentic Internet":
-- 187K+ verified AI agents
-- 33M+ HCS operations daily
-- Cross-protocol support (A2A, MCP, NANDA, Virtuals, ERC-8004)
+- **187K+** verified AI agents
+- **33M+** HCS operations daily
+- **Cross-protocol**: A2A, MCP, NANDA, Virtuals, ERC-8004
 
-Learn more: https://hol.org
+## Links
 
-## Support
-
-- GitHub: https://github.com/hashgraph-online
-- Discord: https://discord.gg/clawd
-- Email: support@hol.org
+- [Website](https://hol.org)
+- [Registry](https://hol.org/registry)
+- [GitHub](https://github.com/hashgraph-online)
+- [Discord](https://discord.gg/clawd)
 
 ## License
 
