@@ -1,5 +1,5 @@
 {
-  "name": "@internet-dot/n8n-nodes-hol-agents",
+  "name": "n8n-nodes-hol-agents",
   "version": "1.0.0",
   "description": "n8n node for discovering and interacting with AI agents on the Hashgraph Online registry",
   "keywords": [
@@ -10,7 +10,9 @@
     "hashgraph",
     "ai-agents",
     "agent-discovery",
-    "hedera"
+    "hedera",
+    "a2a",
+    "mcp"
   ],
   "license": "Apache-2.0",
   "homepage": "https://hol.org",
@@ -46,7 +48,6 @@
     ]
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
     "access": "public"
   },
   "dependencies": {
